@@ -273,7 +273,6 @@ module.exports = {
         'no-invalid-this': 'error',
         'require-await': 'off',
         'no-return-assign': 'off',
-        'operator-linebreak': ['error', 'before'],
         'max-statements-per-line': ['error', { max: 1 }],
         'prefer-exponentiation-operator': 'error',
         'prefer-rest-params': 'error',
@@ -379,6 +378,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/no-absolute-path': 'off',
         'import/newline-after-import': ['error', { count: 1, considerComments: true }],
+        'import/no-duplicates': ['error', { 'prefer-inline': true }],
 
         // Tailwind
         'tailwindcss/no-custom-classname': 'off',

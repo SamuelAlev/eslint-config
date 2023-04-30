@@ -1,6 +1,6 @@
 {
     "name": "@salev/eslint-config",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": {
         "name": "Samuel Alev",
         "email": "samuel.alev@protonmail.com"
@@ -30,6 +30,7 @@
         "@typescript-eslint/eslint-plugin": "^5.59.1",
         "@typescript-eslint/parser": "^5.59.1",
         "eslint-config-standard": "^17.0.0",
+        "eslint-import-resolver-typescript": "^3.5.5",
         "eslint-plugin-eslint-comments": "^3.2.0",
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-import": "^2.27.5",
