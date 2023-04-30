@@ -232,7 +232,6 @@ module.exports = {
     ],
     rules: {
         'prettier/prettier': 'error',
-        indent: ['error', 4],
         'linebreak-style': ['error', 'unix'],
         'prefer-template': 'error',
         'template-curly-spacing': 'error',
