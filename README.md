@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@salev/eslint-config)](https://npmjs.com/package/@salev/eslint-config)
 
 -   Single quotes, with semi
--   Designed to work with TypeScript, React and Tailwind out of the box
+-   Designed to work with TypeScript and React out of the box
 -   Lint also for JSON, YAML, Markdown
 -   Sorted imports, dangling commas
 -   Reasonable defaults, best practices, only one-line of config
@@ -14,7 +14,7 @@
 ### Install
 
 ```bash
-pnpm add -D eslint prettier typescript tailwindcss react react-dom @salev/eslint-config
+pnpm add -D eslint prettier typescript react react-dom @salev/eslint-config
 ```
 
 ### Config `.eslintrc`

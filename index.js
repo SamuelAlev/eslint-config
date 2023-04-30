@@ -8,9 +8,6 @@ module.exports = {
         node: true,
     },
     settings: {
-        tailwindcss: {
-            callees: ['classnames', 'clsx', 'ctl', 'merge'],
-        },
         react: {
             version: 'detect',
         },
@@ -22,7 +19,6 @@ module.exports = {
 
     extends: [
         'standard',
-        'plugin:tailwindcss/recommended',
         'plugin:jsonc/recommended-with-jsonc',
         'plugin:eslint-comments/recommended',
         'plugin:yml/standard',
@@ -34,7 +30,7 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'prettier',
     ],
-    plugins: ['html', 'unicorn', 'no-only-tests', 'tailwindcss', 'prettier'],
+    plugins: ['html', 'unicorn', 'no-only-tests', 'prettier'],
     ignorePatterns: [
         '*.min.*',
         '*.d.ts',
@@ -380,9 +376,6 @@ module.exports = {
         'import/newline-after-import': ['error', { count: 1, considerComments: true }],
         'import/no-duplicates': ['error', { 'prefer-inline': true }],
 
-        // Tailwind
-        'tailwindcss/no-custom-classname': 'off',
-
         // TS
         '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
         '@typescript-eslint/member-delimiter-style': 'error',
@@ -398,8 +391,8 @@ module.exports = {
         // React
         'jsx-quotes': ['error', 'prefer-double'],
         'react/prop-types': 'off',
-        'react/jsx-uses-react': 'off', // React >=17 doesn't needed it anymore
-        'react/react-in-jsx-scope': 'off', // React >=17 doesn't needed it anymore
+        'react/jsx-uses-react': 'off',
+        'react/react-in-jsx-scope': 'off',
         'react/jsx-no-useless-fragment': 'error',
     },
 };
