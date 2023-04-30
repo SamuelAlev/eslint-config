@@ -1,5 +1,7 @@
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.json';
 
+console.log(process.cwd(), tsconfig);
+
 module.exports = {
     reportUnusedDisableDirectives: true,
     env: {
@@ -19,6 +21,7 @@ module.exports = {
             typescript: true,
         },
     },
+
     extends: [
         'standard',
         'plugin:tailwindcss/recommended',
@@ -28,12 +31,9 @@ module.exports = {
         'plugin:markdown/recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
-        'plugin:import/recommended',
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:@typescript-eslint/strict',
         'prettier',
     ],
     plugins: ['html', 'unicorn', 'no-only-tests', 'tailwindcss', 'prettier'],
@@ -208,6 +208,7 @@ module.exports = {
                 project: [tsconfig],
             },
             parser: '@typescript-eslint/parser',
+            excludedFiles: ['**/*.md/*.*'],
             files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
             // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
             rules: {
@@ -279,9 +280,6 @@ module.exports = {
         'prefer-exponentiation-operator': 'error',
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
-        'prefer-template': 'error',
-        'template-curly-spacing': 'error',
-        'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
         'generator-star-spacing': 'off',
         'spaced-comment': [
             'error',
@@ -401,7 +399,6 @@ module.exports = {
 
         // React
         'jsx-quotes': ['error', 'prefer-double'],
-        'react/react-in-jsx-scope': 'off',
         'react/prop-types': 'off',
         'react/jsx-uses-react': 'off', // React >=17 doesn't needed it anymore
         'react/react-in-jsx-scope': 'off', // React >=17 doesn't needed it anymore
