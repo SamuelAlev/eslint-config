@@ -1,7 +1,5 @@
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.json';
 
-console.log(process.cwd(), tsconfig);
-
 module.exports = {
     reportUnusedDisableDirectives: true,
     env: {
@@ -387,13 +385,13 @@ module.exports = {
 
         // TS
         '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
-        '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
+        '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/type-annotation-spacing': ['error', {}],
         '@typescript-eslint/consistent-type-imports': [
             'error',
             { prefer: 'type-imports', disallowTypeAnnotations: false },
         ],
-        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
         '@typescript-eslint/prefer-ts-expect-error': 'error',
         '@typescript-eslint/no-require-imports': 'error',
 
